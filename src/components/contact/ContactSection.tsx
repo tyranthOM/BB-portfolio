@@ -65,9 +65,11 @@ export function ContactSection() {
           <a href={personal.github} target="_blank" rel="noopener noreferrer">
             GITHUB <span>↗</span>
           </a>
-          <a href={personal.twitter} target="_blank" rel="noopener noreferrer">
-            X (TWITTER) <span>↗</span>
-          </a>
+          {personal.twitter && (
+            <a href={personal.twitter} target="_blank" rel="noopener noreferrer">
+              X (TWITTER) <span>↗</span>
+            </a>
+          )}
         </div>
       </div>
     </section>

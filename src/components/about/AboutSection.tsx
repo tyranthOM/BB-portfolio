@@ -114,7 +114,7 @@ export function AboutSection() {
               <div>
                 <small>SUBJECT</small>
                 <h3>Om Bhalerao</h3>
-                <span>QUANT &amp; SYSTEMS ENGINEER</span>
+                <span>ELECTRONICS &amp; CS ENGINEER</span>
               </div>
             </div>
 
@@ -124,21 +124,35 @@ export function AboutSection() {
                 <dd>Mumbai, India</dd>
               </div>
               <div>
-                <dt>CURRENT CHAPTER</dt>
+                <dt>EDUCATION &amp; STANDING</dt>
                 <dd>
-                  Computer Science @ SAKEC
+                  Electronics &amp; Computer Science @ SAKEC
                   <br />
-                  <span>Semester III // Mumbai</span>
+                  <span>CGPA 8.5 · Start Aug 2025</span>
                 </dd>
               </div>
               <div>
-                <dt>CORE SPECIALIZATION</dt>
-                <dd>High-Throughput Distributed Systems &amp; Financial Computing</dd>
+                <dt>ACTIVE ROLES</dt>
+                <dd>
+                  • Database Head, SAKEC Alumni Association
+                  <br />
+                  • Web App Head, SAKEC Pratishtha&apos;27
+                  <br />
+                  • Team Lead, Bridge IT
+                </dd>
               </div>
               <div>
                 <dt>KEY DELIVERABLES</dt>
                 <dd>
-                  Co-creator: La Roche Cafe · Author: Aegis-Match &amp; Krypton-KV
+                  • Bridge IT (Pitched to Biotech-KISAN Hub)
+                  <br />
+                  • Cafe La Roche (Campus Canteen Pre-order)
+                </dd>
+              </div>
+              <div>
+                <dt>COFFEE FUEL</dt>
+                <dd>
+                  0 black coffees a day. 4 the night before an exam.
                 </dd>
               </div>
             </dl>

@@ -27,7 +27,7 @@ export function Hero() {
       <div className="hero-content container">
         <p className="eyebrow">
           <span className="status-dot"></span> MUMBAI, INDIA{" "}
-          <span className="eyebrow-rule"></span> QUANTITATIVE SYSTEMS
+          <span className="eyebrow-rule"></span> ELECTRONICS &amp; COMPUTER SCIENCE
         </p>
 
         <p className="say-name">Say my name.</p>
@@ -47,13 +47,13 @@ export function Hero() {
         </h1>
 
         <p className="hero-role">
-          QUANTITATIVE SYSTEMS <span>×</span> PRODUCT STRATEGY
+          ELECTRONICS &amp; COMPUTER SCIENCE <span>×</span> SYSTEMS &amp; AI
         </p>
 
         <p className="hero-description">
           A little science. A lot of obsession.
           <br />
-          I turn high-throughput algorithms into systems and financial engines that work.
+          From hardware and robotics to high-throughput platforms and applied machine learning in finance.
         </p>
 
         <div className="hero-actions">
