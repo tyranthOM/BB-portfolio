@@ -1,0 +1,129 @@
+================================================================================
+                           OM BHALERAO — PERSONAL INFO & RESUME DATA
+================================================================================
+
+[BASIC CONTACT DETAILS]
+--------------------------------------------------------------------------------
+Full Name     : Om Kundalik Bhalerao
+Phone Number  : +91 9022217744
+Email Address : ombhalerao118@gmail.com / omkundalikbhalerao@gmail.com
+Location      : Mumbai, Maharashtra, India
+Portfolio URL : https://bb-portfolio-alpha.vercel.app
+GitHub        : https://github.com/tyranthOM
+LinkedIn      : https://www.linkedin.com/in/om-bhalerao-107466288
+
+
+[EDUCATION]
+--------------------------------------------------------------------------------
+Institution   : Shah & Anchor Kutchhi Engineering College (SAKEC), Mumbai
+Degree        : B.Tech in Electronics & Computer Science Engineering (ECS)
+Timeline      : 2025 — Present (Started: August 1, 2025)
+Standing      : CGPA 8.5 (Semester 1)
+
+
+[PROFILE SUMMARY]
+--------------------------------------------------------------------------------
+Second-year B.Tech student in Electronics & Computer Science Engineering at
+SAKEC, Mumbai, with a strong foundation bridging hardware and software.
+Passionate about robotics, drone engineering, custom PCB design, and applied
+machine learning in finance. Experienced in building data pipelines, low-latency
+matching algorithms, and high-concurrency web applications to solve real-world
+operational and business problems.
+
+
+[CURRENT POSITIONS & LEADERSHIP ROLES]
+--------------------------------------------------------------------------------
+1. Database Head — SAKEC Alumni Association (August 2025 — Present)
+   - Oversee backend data systems, database management, and information flow.
+   - Maintain reliable data infrastructure supporting institutional records and
+     efficient alumni network operations.
+
+2. Web App Head — SAKEC Pratishtha'27 (2025 — Present)
+   - Direct web application architecture, registration portals, and scheduling
+     systems for SAKEC's flagship college festival.
+   - Coordinate cross-functional sprints across UI/UX, payment reconciliation,
+     and peak server scaling.
+
+3. Team Lead & Research Curator — Bridge IT (January 2025 — April 2025)
+   - Curated and directed a DBT-funded student research initiative under the
+     Biotech-KISAN Hub scheme.
+   - Led a 6-member student research team across platform development, research,
+     and agricultural field outreach.
+
+
+[FLAGSHIP PROJECTS]
+--------------------------------------------------------------------------------
+1. Bridge IT — AgriTech Digital Marketplace (Jan 2025 – Apr 2025)
+   - Tagline: "Farm to boardroom. One marketplace, AI doing the haggling."
+   - Pitch: Pitched to the Biotech-KISAN Hub (DBT, Govt. of India).
+   - Metrics: 12 agricultural supply chains mapped · 6-person student team.
+   - Stack: Python, AI Negotiation Chatbot, Dual Portals, Multilingual Low-Bandwidth.
+   - Highlights:
+     • Designed a dual-portal marketplace connecting farmers directly with industrial
+       buyers, eliminating intermediary price distortion.
+     • Implemented a protected minimum price algorithm enforcing a non-negotiable floor
+       price (cultivation cost + 20-30% fair margin) during AI-driven negotiations.
+     • Multilingual low-bandwidth optimization for rural deployment.
+
+2. Cafe La Roche — Campus Canteen Pre-Order Platform (Jul 2025 – Sep 2025)
+   - Tagline: "Order in lecture. Pick up when it ends."
+   - Role: Intern as Full Stack Web Developer @ Partners Beverages And Solutions.
+   - Co-Creators: Om Bhalerao, Ranjeet Epili, Mitansh Jambusariya.
+   - Live URL: http://121.241.29.115:5050
+   - Stack: React, Node.js, Express, MongoDB, Razorpay, WebSockets.
+   - Highlights:
+     • Built a full-stack web application enabling students to pre-order food during
+       lectures, ready for pickup by class end, eliminating 20+ min queues.
+     • Implemented strict college-email authentication (@sakec.ac.in).
+     • Live Razorpay payment gateway integration with real-time kitchen display tokens.
+
+3. Aegis-Match — High-Frequency Limit Order Book
+   - Category: Quantitative Finance & Trading Systems
+   - Stack: C++20, POSIX Sockets, FIX 4.4, Lock-Free Ring Buffers.
+   - Highlights: Sub-microsecond (380ns P99) order matching engine using flat memory
+     arenas and cache-aligned price ladders with zero runtime heap allocations.
+
+4. Krypton-KV — Crash-Resilient Transactional Storage Engine
+   - Category: Distributed Systems & Financial Ledgers
+   - Stack: C++20, SkipList, Bloom Filters, Write-Ahead Log (WAL), CRC32.
+   - Highlights: High-velocity ledger engine processing 185k entries/sec with sub-12ms
+     crash recovery and double-entry reconciliation invariants.
+
+
+[HARDWARE & AUTOMATION PROJECTS]
+--------------------------------------------------------------------------------
+• Smart Dustbin:
+  Automated contactless dustbin utilizing ultrasonic distance sensors and servo
+  motors for touchless lid triggering.
+
+• GYM Membership Automation:
+  n8n workflow automation featuring Schedule Triggers, Edit Fields, IF evaluation
+  nodes, automated expiry condition detection, and rule-based renewal reminders.
+
+• Robotic Car:
+  Microcontroller-based robotic car featuring ultrasonic obstacle avoidance, manual
+  remote control modes, and conversion capability into a path-following vehicle.
+
+• Automatic Ceiling Light PCB:
+  Designed and fabricated a physical PCB using LDR light-dependent resistors and
+  motion-sensing circuitry, translated from schematic to physical board fabrication.
+
+
+[TECHNICAL SKILLS MATRIX]
+--------------------------------------------------------------------------------
+• Programming Languages    : Python (NumPy, Pandas), C++20 / C, JavaScript / TypeScript
+• Web & Frameworks         : React, Next.js, Node.js, Express, Tailwind CSS, WebSockets
+• Databases & Storage      : PostgreSQL, MongoDB, Redis
+• Hardware & Embedded      : ESP32, Arduino UNO, Circuit Design, PCB Fabrication,
+                             3D Printing & Modelling, Sensors (Ultrasonic, LDR, Servo)
+• Automation & DevOps      : N8N Workflow Automation, Docker, Git / GitHub, CI/CD
+• Domains of Interest      : Applied ML in Finance, Robotics, Drone Engineering,
+                             AgriTech Supply Chains, High-Throughput Systems
+
+
+[METRICS & FUN FACTS]
+--------------------------------------------------------------------------------
+• Git Commits Logged       : 175+
+• Supply Chains Mapped     : 12
+• Coffee Fuel Metric       : "0 black coffees a day. 4 the night before an exam."
+================================================================================
