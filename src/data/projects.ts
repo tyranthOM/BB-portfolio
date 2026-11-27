@@ -56,23 +56,23 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "canteen-platform",
-    title: "Canteen Ordering and Kitchen Platform",
+    slug: "cafe-la-roche",
+    title: "CAFE LA ROCHE",
     category: "Web",
-    tag: "Headline Project",
-    oneLiner: "Pre-order and kitchen-management platform for college canteens.",
+    tag: "CAMPUS CANTEEN PLATFORM",
+    oneLiner: "Order during lecture, pick up when it ends.",
     dates: "Jul 2025 to Sep 2025",
     role: "Full Stack Web Developer Intern, Partners Beverages and Solutions (Co-built with Ranjeet Epili and Mitansh Jambusariya)",
     problem:
-      "Long queues at peak hours meant students skipped the canteen, and the canteen lost sales.",
+      "Long lunchtime canteen queues eat into students' break time and cause the canteen to lose peak-hour sales.",
     solution:
-      "Students order from their phones before a lecture ends and pick up on arrival. The kitchen sees live orders on its own screen, and the owner updates menu and prices through a CMS.",
+      "Students order from their phones before a lecture ends and pick up on arrival. The kitchen sees live orders on its own screen with instant digital token generation.",
     keyDecisions:
-      "Strict collegiate authentication (@sakec.ac.in), instant Razorpay digital token verification, and a decoupled reusable multi-tenant architecture: onboarding a new canteen requires only a new menu, not new code.",
+      "Strict collegiate authentication (@sakec.ac.in), instant Razorpay digital token verification, and real-time kitchen WebSocket synchronization.",
     result:
-      "Deployed for La Roche Cafe at SAKEC as a paid engagement (₹17,500), reaching a potential 500-700 students. Estimated to save about 20 minutes per order.",
+      "Deployed live on the SAKEC campus network. Eliminates lunchtime queuing and enables direct kitchen order dispatch with instant digital token generation.",
     stack: ["React", "Node.js", "Express", "MongoDB", "Razorpay", "WebSockets"],
-    liveUrl: "http://121.241.29.115:5050", // [TODO: add larochecafe.in domain once DNS propagates]
+    liveUrl: "https://larochecafe.in",
     githubUrl: "https://github.com/tyranthOM/la-roche-cafe",
     featured: true,
   },

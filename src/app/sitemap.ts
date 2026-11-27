@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/projects",
     "/resume",
     "/contact",
-    "/projects/canteen-platform",
+    "/projects/cafe-la-roche",
     "/projects/bridge-it",
     "/projects/bulk-document-processor",
     "/projects/aegis-match",

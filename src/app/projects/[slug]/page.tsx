@@ -110,7 +110,18 @@ export default async function ProjectCaseStudyPage({
                   className="inline-flex items-center gap-2 px-4 py-2 border border-primary bg-primary text-primary-foreground font-mono text-xs font-bold uppercase hover:opacity-90 transition-opacity"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
-                  LIVE APPLICATION
+                  LIVE APPLICATION (larochecafe.in)
+                </a>
+              )}
+              {project.slug === "cafe-la-roche" && (
+                <a
+                  href="https://larochecafe.sakec.ac.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-border bg-card text-foreground font-mono text-xs font-bold uppercase hover:bg-muted transition-colors"
+                >
+                  <ExternalLink className="w-3.5 h-3.5 text-secondary" />
+                  CAMPUS PORTAL (larochecafe.sakec.ac.in)
                 </a>
               )}
             </div>
