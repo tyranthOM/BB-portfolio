@@ -17,6 +17,8 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   image?: string;
+  skillsShown?: string[];
+  note?: string;
 }
 
 export interface LeadershipExperience {
@@ -36,7 +38,7 @@ export const PERSONAL_INFO = {
   email: "ombhalerao118@gmail.com", // [TODO: confirm primary email]
   github: "https://github.com/tyranthOM",
   linkedin: "https://www.linkedin.com/in/om-bhalerao-107466288",
-  portfolioUrl: "https://ombhalerao.vercel.app/",
+  portfolioUrl: "https://bb-portfolio-alpha.vercel.app/",
   resumePdf: "/resume.pdf",
   aboutText:
     "I'm a B.Tech student in Electronics & Computer Science at SAKEC, Mumbai. I like turning messy real-world problems into working products. I led a six-person team that pitched an AI-driven AgriTech marketplace to the Biotech-KISAN Hub (DBT, Govt. of India), and I built and shipped a campus ordering app with live payments. I'm now focused on AI products, fintech and how startups are built and run.",
@@ -53,6 +55,27 @@ export const PERSONAL_INFO = {
 };
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "canteen-platform",
+    title: "Canteen Ordering and Kitchen Platform",
+    category: "Web",
+    tag: "Headline Project",
+    oneLiner: "Pre-order and kitchen-management platform for college canteens.",
+    dates: "Jul 2025 to Sep 2025",
+    role: "Full Stack Web Developer Intern, Partners Beverages and Solutions (Co-built with Ranjeet Epili and Mitansh Jambusariya)",
+    problem:
+      "Long queues at peak hours meant students skipped the canteen, and the canteen lost sales.",
+    solution:
+      "Students order from their phones before a lecture ends and pick up on arrival. The kitchen sees live orders on its own screen, and the owner updates menu and prices through a CMS.",
+    keyDecisions:
+      "Strict collegiate authentication (@sakec.ac.in), instant Razorpay digital token verification, and a decoupled reusable multi-tenant architecture: onboarding a new canteen requires only a new menu, not new code.",
+    result:
+      "Deployed for La Roche Cafe at SAKEC as a paid engagement (₹17,500), reaching a potential 500-700 students. Estimated to save about 20 minutes per order.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Razorpay", "WebSockets"],
+    liveUrl: "http://121.241.29.115:5050", // [TODO: add larochecafe.in domain once DNS propagates]
+    githubUrl: "https://github.com/tyranthOM/la-roche-cafe",
+    featured: true,
+  },
   {
     slug: "bridge-it",
     title: "Bridge IT",
@@ -76,21 +99,25 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    slug: "cafe-la-roche",
-    title: "Cafe La Roche",
+    slug: "bulk-document-processor",
+    title: "Bulk Document Processor",
     category: "Web",
-    tag: "Campus Canteen Platform",
-    oneLiner: "Order during lecture, pick up when it ends.",
-    dates: "Jul 2025 to Sep 2025",
-    role: "Full Stack Web Developer Intern, Partners Beverages and Solutions (Co-built with Ranjeet Epili and Mitansh Jambusariya)",
-    problem: "Long lunchtime canteen queues eat into students' break time.",
+    tag: "Workflow Automation",
+    oneLiner:
+      "Web tool that batch-edits documents and packages them into an upload-ready zip.",
+    dates: "2025",
+    role: "Creator & Developer",
+    problem:
+      "Preparing and uploading multiple files by hand across academic or administrative portals is repetitive, slow, and error-prone.",
     solution:
-      "Prepaid pre-orders, college-email-only login (@sakec.ac.in), live Razorpay payments with token generation, and a real-time kitchen dashboard.",
+      "Upload a set of files, apply required text and format transformations automatically across all items in batch, and download a structured zip package ready for submission.",
+    keyDecisions:
+      "Client-side processing with in-memory zip compression to preserve file security and eliminate server bandwidth bottlenecks.",
     result:
-      "Deployed live on the SAKEC campus network. Eliminates lunchtime queuing and enables direct kitchen order dispatch with instant digital token generation.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "Razorpay", "WebSockets"],
-    liveUrl: "http://121.241.29.115:5050",
-    githubUrl: "https://github.com/tyranthOM/la-roche-cafe",
+      "Automates repetitive multi-file transformations from minutes of manual copying to a single batch upload and zip download.",
+    skillsShown: ["Web Development", "File Processing", "Automation", "Workflow Optimization"],
+    stack: ["React", "TypeScript", "JSZip", "Automation"],
+    liveUrl: "https://scamyyy.vercel.app/",
     featured: true,
   },
   {
@@ -109,7 +136,7 @@ export const PROJECTS: Project[] = [
     framing: "Fintech engineering depth. A supporting project showcasing systems rigor.",
     stack: ["C++20", "POSIX Sockets", "FIX 4.4"],
     githubUrl: "https://github.com/tyranthOM/aegis-engine",
-    featured: true,
+    featured: false,
   },
   {
     slug: "krypton-kv",
@@ -128,6 +155,25 @@ export const PROJECTS: Project[] = [
       "Processes 185k entries/sec with sub-12ms crash recovery [VERIFY: benchmark in README].",
     stack: ["C++20", "SkipList", "Bloom Filters", "Write-Ahead Log"],
     githubUrl: "https://github.com/tyranthOM/krypton-kv",
+    featured: false,
+  },
+  {
+    slug: "commitor",
+    title: "Commitor",
+    category: "Systems",
+    tag: "Git Automation Tool",
+    oneLiner: "Python tool that schedules and automates git commits at set times.",
+    dates: "2025",
+    role: "Author",
+    problem:
+      "Manual timestamp synchronization and repetitive commit dispatching across scheduled development tasks.",
+    solution:
+      "Automates git repository workflows and scheduled commits using Python scripting and the GitHub API.",
+    result:
+      "Lightweight CLI utility demonstrating scripting, task scheduling, and direct integration with git internals.",
+    skillsShown: ["Scripting", "Scheduling", "Git & GitHub APIs"],
+    stack: ["Python", "Git API", "Automation CLI"],
+    githubUrl: "https://github.com/tyranthOM/commitor",
     featured: false,
   },
 ];
@@ -157,6 +203,7 @@ export const LEADERSHIP_EXPERIENCE: LeadershipExperience[] = [
     organization: "Partners Beverages and Solutions",
     bullets: [
       "Engineered Cafe La Roche campus canteen ordering platform with live Razorpay payments and WebSocket kitchen tokens.",
+      "Delivered as a ₹17,500 commercial paid engagement reaching 500-700 students and saving ~20 minutes per order.",
     ],
   },
   {

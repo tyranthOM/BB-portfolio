@@ -1,16 +1,18 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ombhalerao.vercel.app";
+  const baseUrl = "https://bb-portfolio-alpha.vercel.app";
   const routes = [
     "",
     "/projects",
     "/resume",
     "/contact",
+    "/projects/canteen-platform",
     "/projects/bridge-it",
-    "/projects/cafe-la-roche",
+    "/projects/bulk-document-processor",
     "/projects/aegis-match",
     "/projects/krypton-kv",
+    "/projects/commitor",
   ];
 
   return routes.map((route) => ({
