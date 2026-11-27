@@ -7,6 +7,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ArrowLeft, ExternalLink, CheckCircle2 } from "lucide-react";
 import { GithubIcon } from "@/components/ui/SocialIcons";
+import { ProposalReader } from "@/components/projects/ProposalReader";
 
 export async function generateStaticParams() {
   return PROJECTS.map((p) => ({
@@ -190,6 +191,14 @@ export default async function ProjectCaseStudyPage({
                 </p>
               </div>
             </div>
+
+            {/* Read-Only Research Proposal for Bridge IT */}
+            {project.slug === "bridge-it" && (
+              <div>
+                <span className="mono-tag block mb-2">[ 06 // DBT RESEARCH PAPER ]</span>
+                <ProposalReader />
+              </div>
+            )}
 
             {/* Tech Stack Tags */}
             <div>
