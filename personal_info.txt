@@ -8,7 +8,7 @@ Full Name     : Om Kundalik Bhalerao
 Phone Number  : +91 9022217744
 Email Address : ombhalerao118@gmail.com / omkundalikbhalerao@gmail.com
 Location      : Mumbai, Maharashtra, India
-Portfolio URL : https://bb-portfolio-alpha.vercel.app
+Portfolio URL : https://ombhalerao.vercel.app/
 GitHub        : https://github.com/tyranthOM
 LinkedIn      : https://www.linkedin.com/in/om-bhalerao-107466288
 
