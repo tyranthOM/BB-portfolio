@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
 :root {
   /* Light Theme (Warm Paper / Swiss Editorial) */
   --background: #fbfbfa;
@@ -17,27 +35,34 @@
   --border: #e2e8f0;
   --input: #e2e8f0;
   --ring: #0f766e;
-  --grid-line: rgba(15, 23, 42, 0.04);
+  --grid-line: rgba(15, 23, 42, 0.05);
+  color-scheme: light;
 }
 
-.dark, [data-theme="dark"] {
+html.dark, html[data-theme="dark"], body.dark, [data-theme="dark"] {
   /* Dark Theme (Obsidian / Technical Blueprint) */
-  --background: #090a0f;
-  --foreground: #f8fafc;
-  --card: #0f121a;
-  --card-foreground: #f8fafc;
-  --popover: #0f121a;
-  --popover-foreground: #f8fafc;
-  --primary: #f8fafc;
-  --primary-foreground: #090a0f;
-  --secondary: #3b82f6; /* Electric Cobalt Blue accent */
-  --secondary-foreground: #ffffff;
-  --muted: #161b26;
-  --muted-foreground: #94a3b8;
-  --border: #1e293b;
-  --input: #1e293b;
-  --ring: #3b82f6;
-  --grid-line: rgba(255, 255, 255, 0.04);
+  --background: #090a0f !important;
+  --foreground: #f8fafc !important;
+  --card: #0f121a !important;
+  --card-foreground: #f8fafc !important;
+  --popover: #0f121a !important;
+  --popover-foreground: #f8fafc !important;
+  --primary: #f8fafc !important;
+  --primary-foreground: #090a0f !important;
+  --secondary: #3b82f6 !important; /* Electric Cobalt Blue accent */
+  --secondary-foreground: #ffffff !important;
+  --muted: #161b26 !important;
+  --muted-foreground: #94a3b8 !important;
+  --border: #1e293b !important;
+  --input: #1e293b !important;
+  --ring: #3b82f6 !important;
+  --grid-line: rgba(255, 255, 255, 0.05) !important;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 /* Background Grid Overlay */

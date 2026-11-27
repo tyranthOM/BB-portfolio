@@ -23,21 +23,24 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setMounted(true);
     const saved = localStorage.getItem("om_portfolio_theme") as Theme | null;
-    if (saved === "light" || saved === "dark") {
-      setThemeState(saved);
-      applyTheme(saved);
-    } else {
-      // Default to light as inspected
-      applyTheme("light");
-    }
+    const initialTheme = saved === "dark" || saved === "light" ? saved : "light";
+    setThemeState(initialTheme);
+    applyTheme(initialTheme);
   }, []);
 
   const applyTheme = (t: Theme) => {
-    document.documentElement.setAttribute("data-theme", t);
+    const root = document.documentElement;
+    const body = document.body;
+
+    root.setAttribute("data-theme", t);
+    if (body) body.setAttribute("data-theme", t);
+
     if (t === "dark") {
-      document.documentElement.classList.add("dark");
+      root.classList.add("dark");
+      if (body) body.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      root.classList.remove("dark");
+      if (body) body.classList.remove("dark");
     }
   };
 
