@@ -92,7 +92,7 @@ export default async function ProjectCaseStudyPage({
 
             {/* Direct Links */}
             <div className="mt-6 flex flex-wrap gap-3">
-              {project.slug === "bridge-it" ? (
+              {project.slug === "bridge-it" && (
                 <a
                   href="#dbt-paper"
                   className="inline-flex items-center gap-2 px-4 py-2 border border-secondary/40 bg-secondary/15 text-secondary font-mono text-xs font-bold uppercase hover:bg-secondary/25 transition-colors cursor-pointer"
@@ -100,18 +100,6 @@ export default async function ProjectCaseStudyPage({
                   <Eye className="w-3.5 h-3.5 text-secondary" />
                   READ RESEARCH PAPER
                 </a>
-              ) : (
-                project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 border border-border bg-card text-foreground font-mono text-xs font-bold uppercase hover:bg-muted transition-colors"
-                  >
-                    <GithubIcon className="w-3.5 h-3.5" />
-                    PROJECT REPOSITORY
-                  </a>
-                )
               )}
               {project.liveUrl && (
                 <a
