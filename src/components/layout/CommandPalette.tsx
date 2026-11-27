@@ -145,7 +145,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       },
 
       // Project Case Studies
-      ...portfolioContent.projects.featured.map((proj) => ({
+      ...portfolioContent.projects.featured.map((proj: any) => ({
         id: `proj-${proj.slug}`,
         title: `Case Study: ${proj.title} (${proj.category})`,
         category: "PROJECTS" as const,

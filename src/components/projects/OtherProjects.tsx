@@ -29,7 +29,7 @@ export function OtherProjects() {
 
         {/* Grid of Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {other.map((item) => (
+          {other.map((item: any) => (
             <Link
               key={item.title}
               href={item.githubUrl}
@@ -65,7 +65,7 @@ export function OtherProjects() {
 
               {/* Stack tags */}
               <div className="flex flex-wrap gap-1.5 pt-2 border-t border-white/[0.04]">
-                {item.stack.map((t) => (
+                {item.stack?.map((t: any) => (
                   <span
                     key={t}
                     className="px-1.5 py-0.5 font-mono text-[10px] bg-zinc-900/80 text-zinc-400 border border-white/5 rounded-xs"

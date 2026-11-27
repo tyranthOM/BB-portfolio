@@ -108,7 +108,7 @@ export function DevClockSection() {
 
           {/* 4 Metric Counters Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/[0.08]">
-            {devClock.metrics.map((m) => (
+            {devClock.metrics.map((m: any) => (
               <div key={m.label} className="space-y-1">
                 <div className="flex items-baseline gap-1">
                   <span className="text-xl sm:text-2xl font-bold text-zinc-100 font-mono">

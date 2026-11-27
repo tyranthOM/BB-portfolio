@@ -1,80 +1,61 @@
 "use client";
 
 import React from "react";
-import { portfolioContent } from "@/data/content";
+import { SKILLS_GROUPS } from "@/data/projects";
+import { Users, BrainCircuit, Code2 } from "lucide-react";
 
 export function SkillsSection() {
-  const { skills } = portfolioContent;
-
-  const symbolMap: Record<number, { symbol: string; num: string }> = {
-    0: { symbol: "Hf", num: "01" }, // High Frequency / High Throughput
-    1: { symbol: "Fs", num: "02" }, // Full Stack
-    2: { symbol: "Qm", num: "03" }, // Quantitative Methods
-    3: { symbol: "Bs", num: "04" }, // Business Strategy
+  const getIcon = (idx: number) => {
+    switch (idx) {
+      case 0:
+        return <Users className="w-4 h-4 text-secondary" />;
+      case 1:
+        return <BrainCircuit className="w-4 h-4 text-secondary" />;
+      default:
+        return <Code2 className="w-4 h-4 text-secondary" />;
+    }
   };
 
   return (
-    <section className="formula-section section-pad" id="formula" aria-labelledby="formula-title">
-      <div className="container">
-        {/* Section Heading */}
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">
-              <span className="section-number">03 /</span> THE INGREDIENTS
-            </p>
-            <h2 id="formula-title">
-              Good chemistry.
-              <br />
-              <em>Better engineering.</em>
-            </h2>
-          </div>
-          <p className="section-description">
-            The tools on my bench.
-            <br />
-            The business acumen that brings them together.
+    <section className="py-20 border-b border-border bg-background/50">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="mb-10 pb-4 border-b border-border">
+          <span className="mono-tag block mb-1">[ 03 // DEFENSIBLE CAPABILITIES ]</span>
+          <h2 className="text-3xl sm:text-4xl font-syne font-extrabold uppercase text-foreground">
+            CORE <span className="font-playfair italic font-normal text-secondary lowercase">skills & toolset</span>
+          </h2>
+          <p className="mt-2 text-xs font-mono text-muted-foreground">
+            // Exclusively verified competencies defensible in technical and product founder interviews.
           </p>
         </div>
 
-        {/* Formula Grid */}
-        <div className="formula-grid">
-          {skills.map((cat, idx) => {
-            const sym = symbolMap[idx] || { symbol: "Ex", num: `0${idx + 1}` };
-            return (
-              <article key={cat.category} className="skill-group">
-                <span className="skill-symbol" aria-hidden="true">
-                  {sym.symbol}
-                  <small>{sym.num}</small>
-                </span>
-                <div>
-                  <h3>{cat.category}</h3>
-                  <ul className="tags">
-                    {cat.skills.map((skill) => (
-                      <li key={skill}>{skill}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            );
-          })}
+        {/* 3 Skill Groups Tiles */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {SKILLS_GROUPS.map((group, idx) => (
+            <div
+              key={group.category}
+              className="p-6 border border-border bg-card hover:border-secondary/50 transition-colors shadow-sm"
+            >
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border">
+                {getIcon(idx)}
+                <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-foreground">
+                  // {group.category}
+                </h3>
+              </div>
 
-          {/* 5th Skill Group: The Human Element & Leadership */}
-          <article className="skill-group">
-            <span className="skill-symbol" aria-hidden="true">
-              Hu
-              <small>05</small>
-            </span>
-            <div>
-              <h3>The Human Element</h3>
-              <ul className="tags">
-                <li>Cross-Functional Leadership</li>
-                <li>Product Roadmapping</li>
-                <li>Stakeholder Management</li>
-                <li>Technical Writing</li>
-                <li>Student Mentorship</li>
-                <li>High-Stakes Execution</li>
-              </ul>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono border border-border bg-background text-foreground"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </article>
+          ))}
         </div>
       </div>
     </section>

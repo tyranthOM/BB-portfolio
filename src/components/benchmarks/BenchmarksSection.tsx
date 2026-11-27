@@ -28,7 +28,7 @@ export function BenchmarksSection() {
 
         {/* Badges Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {benchmarks.map((bm) => (
+          {benchmarks.map((bm: any) => (
             <div
               key={bm.id}
               className={`p-6 bg-[#080b10] border rounded-sm flex flex-col justify-between space-y-4 transition-all hover:border-white/30 ${
@@ -73,7 +73,7 @@ export function BenchmarksSection() {
 
               {/* Tags bar */}
               <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.05]">
-                {bm.tags.map((tag) => (
+                {bm.tags.map((tag: any) => (
                   <span
                     key={tag}
                     className="px-2 py-0.5 font-mono text-[10px] bg-zinc-950 text-zinc-400 border border-white/5 rounded-xs"

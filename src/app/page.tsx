@@ -1,57 +1,37 @@
 "use client";
 
-import React, { useState } from "react";
-import { ReadingProgressBar } from "@/components/layout/ReadingProgressBar";
+import React from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/hero/Hero";
-import { ManifestoStrip } from "@/components/hero/ManifestoStrip";
 import { FeaturedProjects } from "@/components/projects/FeaturedProjects";
-import { AboutSection } from "@/components/about/AboutSection";
+import { LeadershipSection } from "@/components/experience/ExperienceSection";
 import { SkillsSection } from "@/components/skills/SkillsSection";
-import { ContactSection } from "@/components/contact/ContactSection";
+import { ContactCta } from "@/components/contact/ContactCta";
 import { Footer } from "@/components/layout/Footer";
-import { CommandPalette } from "@/components/layout/CommandPalette";
 
 export default function Home() {
-  const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
-
   return (
     <>
-      {/* 2px Radioactive Green Scroll Progress Bar */}
-      <ReadingProgressBar />
+      <Navbar />
 
-      {/* Breaking Bad / The Lab Fixed Header */}
-      <Navbar onOpenCommandPalette={() => setCommandPaletteOpen(true)} />
-
-      {/* Main Flow */}
-      <main id="main">
-        {/* Hero Section: Say my name. [O]M BHALERAO. */}
+      <main className="flex-1">
+        {/* 1. Hero: Name, Headline, Ask, and 2 Action Buttons */}
         <Hero />
 
-        {/* Manifesto Strip: No Half Measures */}
-        <ManifestoStrip />
-
-        {/* 01 / THE LAB: The good stuff (Selected Experiments) */}
+        {/* 2. 3 Featured Projects: Bridge IT, Cafe La Roche, Aegis-Match */}
         <FeaturedProjects />
 
-        {/* 02 / THE BACKSTORY: Meet the mind behind the formula & Official Dossier */}
-        <AboutSection />
+        {/* 3. Leadership & Experience Timeline */}
+        <LeadershipSection />
 
-        {/* 03 / THE FORMULA: Good chemistry. Better engineering. */}
+        {/* 4. Skills (3 Defensible Groups Only) */}
         <SkillsSection />
 
-        {/* 04 / CONTACT: Let's [Co]ok. */}
-        <ContactSection />
+        {/* 5. Contact Callout Banner */}
+        <ContactCta />
       </main>
 
-      {/* The Lab Footer */}
       <Footer />
-
-      {/* Command Palette (⌘K) */}
-      <CommandPalette
-        isOpen={commandPaletteOpen}
-        onClose={() => setCommandPaletteOpen(false)}
-      />
     </>
   );
 }

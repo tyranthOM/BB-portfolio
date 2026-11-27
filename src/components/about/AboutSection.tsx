@@ -1,203 +1,58 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
-import { portfolioContent } from "@/data/content";
-import { HalftoneCanvas } from "@/components/hero/HalftoneCanvas";
-import { Sparkles, Eye, ArrowUpRight } from "lucide-react";
+import React from "react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { PERSONAL_INFO } from "@/data/content";
 
 export function AboutSection() {
-  const { personal, experience } = portfolioContent;
-  const [photoMode, setPhotoMode] = useState<"photo" | "dots">("photo");
-
   return (
-    <section className="about-section section-pad" id="about" aria-labelledby="about-title">
-      <div className="container">
-        {/* Main 2-Column About Grid */}
-        <div className="about-grid">
-          {/* Left Column: Narrative Copy */}
-          <div className="about-copy">
-            <p className="eyebrow">
-              <span className="section-number">02 /</span> THE BACKSTORY
-            </p>
-            <h2 id="about-title">
-              Meet the mind
-              <br />
-              behind the <em>formula.</em>
+    <section className="py-24 border-b border-border bg-background">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Header & Label */}
+          <div className="lg:col-span-5">
+            <span className="mono-tag block mb-1">[ 01 // IDENTITY ]</span>
+            <h2 className="text-3xl sm:text-4xl font-syne font-extrabold uppercase text-foreground">
+              SO <span className="font-playfair italic font-normal text-secondary lowercase">basically...</span>
             </h2>
+            <div className="w-16 h-0.5 bg-secondary mt-3 mb-6" />
 
-            <p className="about-intro">
-              I’m Om. I like knowing
-              <br />
-              what makes complex systems tick.
-            </p>
-
-            <p>
-              I’m a Computer Science student and quantitative systems builder in Mumbai.
-              I understand systems by engineering them myself — from sub-microsecond
-              matching engines and distributed transactional ledgers to real-world operational platforms like La Roche Cafe.
-            </p>
-
-            <p>
-              Currently studying Computer Science at Shah &amp; Anchor Kutchhi Engineering
-              College (SAKEC), Mumbai. When an architectural challenge catches my curiosity,
-              I build my way to an answer.
-            </p>
-
-            <div className="about-interest">
-              <span>WHAT KEEPS THE LAB RUNNING</span>
-              <p>
-                Market microstructure &amp; order-book matching · Distributed consensus
-                &amp; LSM ledgers · Unit economics &amp; venture models · High-density tactile software design
+            <div className="p-4 border border-border bg-card">
+              <span className="mono-tag block text-muted-foreground mb-1">// STATUS DOSSIER</span>
+              <p className="font-mono text-xs text-foreground">
+                B.Tech in Electronics & CS · SAKEC Mumbai
+                <br />
+                Semester 1 CGPA: <span className="text-secondary font-bold">8.5</span>
+                <br />
+                Database Head · SAKEC Alumni Association
+                <br />
+                Web App Head · Pratishtha &apos;27
               </p>
-            </div>
-
-            {/* Photo Preview Card with Instant Toggle */}
-            <div className="mt-8 p-4 bg-[#141c12] border border-[#2b3a20] rounded-sm">
-              <div className="flex items-center justify-between mb-3 text-[10px] font-mono text-[#a6ac9c]">
-                <span>LAB SPECIMEN // PORTRAIT RECORD</span>
-                <button
-                  type="button"
-                  onClick={() => setPhotoMode(photoMode === "photo" ? "dots" : "photo")}
-                  className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#1c2917] border border-[#3e562f] hover:border-[#b6d88b] text-[#d4e5bd] text-[9px] cursor-pointer"
-                >
-                  {photoMode === "photo" ? (
-                    <>
-                      <Sparkles className="w-3 h-3 text-[#b6d88b]" />
-                      <span>Switch to Dot Matrix</span>
-                    </>
-                  ) : (
-                    <>
-                      <Eye className="w-3 h-3 text-[#b6d88b]" />
-                      <span>Switch to Real Photo</span>
-                    </>
-                  )}
-                </button>
-              </div>
-
-              {photoMode === "photo" ? (
-                <div className="relative w-full aspect-[4/3] rounded-sm overflow-hidden border border-[#3e562f]">
-                  <Image
-                    src={personal.avatarUrl}
-                    alt="Om Bhalerao — SAKEC Mumbai"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 420px"
-                    priority
-                    className="object-cover filter contrast-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#10150f]/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-2 left-2 font-mono text-[9px] text-[#ecebdc] bg-black/60 px-2 py-0.5 rounded">
-                    OM BHALERAO // SAKEC MUMBAI
-                  </div>
-                </div>
-              ) : (
-                <div className="w-full flex justify-center">
-                  <HalftoneCanvas imageSrc={personal.avatarUrl} className="max-w-[320px]" />
-                </div>
-              )}
             </div>
           </div>
 
-          {/* Right Column: The Official Tilted Dossier */}
-          <aside className="dossier" aria-label="Om's education and current work">
-            <div className="dossier-top">
-              <span>PERSONNEL RECORD</span>
-              <span>OB—2026</span>
+          {/* Narrative Body */}
+          <div className="lg:col-span-7 space-y-6 text-base text-muted-foreground font-sans leading-relaxed">
+            <p>
+              I am a second-year B.Tech student in Electronics & Computer Science Engineering at Shah & Anchor Kutchhi Engineering College (SAKEC), Mumbai. My work bridges physical computing and scalable web applications — moving smoothly between custom circuit routing, microcontrollers, and low-latency distributed systems.
+            </p>
+            <p>
+              Over the past year, I led the student research curation for <strong className="text-foreground font-medium">Bridge IT</strong>, pitched to the Biotech-KISAN Hub under the Department of Biotechnology (Govt. of India), and architected <strong className="text-foreground font-medium">Cafe La Roche</strong>, an automated cafeteria ordering infrastructure that cut lecture-break queues across campus.
+            </p>
+            <p>
+              Beyond production web apps, I explore quantitative finance primitives like zero-allocation Limit Order Books in C++20 and resilient transactional key-value ledgers with Write-Ahead Logging.
+            </p>
+
+            <div className="pt-4">
+              <Link
+                href="/resume"
+                className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-secondary hover:underline"
+              >
+                VIEW FULL CURRICULUM VITAE
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
             </div>
-
-            <div className="dossier-identity">
-              <span className="element dossier-element">
-                <small>08</small>
-                <b>O</b>
-                <em>Oxygen</em>
-              </span>
-              <div>
-                <small>SUBJECT</small>
-                <h3>Om Bhalerao</h3>
-                <span>ELECTRONICS &amp; CS ENGINEER</span>
-              </div>
-            </div>
-
-            <dl>
-              <div>
-                <dt>BASE OF OPERATIONS</dt>
-                <dd>Mumbai, India</dd>
-              </div>
-              <div>
-                <dt>EDUCATION &amp; STANDING</dt>
-                <dd>
-                  Electronics &amp; Computer Science @ SAKEC
-                  <br />
-                  <span>CGPA 8.5 · Start Aug 2025</span>
-                </dd>
-              </div>
-              <div>
-                <dt>ACTIVE ROLES</dt>
-                <dd>
-                  • Database Head, SAKEC Alumni Association
-                  <br />
-                  • Web App Head, SAKEC Pratishtha&apos;27
-                  <br />
-                  • Team Lead, Bridge IT
-                </dd>
-              </div>
-              <div>
-                <dt>KEY DELIVERABLES</dt>
-                <dd>
-                  • Bridge IT (Pitched to Biotech-KISAN Hub)
-                  <br />
-                  • Cafe La Roche (Campus Canteen Pre-order)
-                </dd>
-              </div>
-              <div>
-                <dt>COFFEE FUEL</dt>
-                <dd>
-                  0 black coffees a day. 4 the night before an exam.
-                </dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-
-        {/* Timeline: Every Chapter Counts */}
-        <div className="mt-20 pt-12 border-t border-[#30382a]">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">
-                <span className="section-number">CHRONOLOGY /</span> FIELD EXPERIENCE
-              </p>
-              <h3>Every chapter counts.</h3>
-            </div>
-          </div>
-
-          <div className="timeline">
-            {experience.map((item, idx) => (
-              <article key={item.organization} className="experience-row">
-                <div className="experience-date">
-                  {item.dates}
-                  <span>0{idx + 1} / {item.type.toUpperCase()}</span>
-                </div>
-                <div className="experience-body">
-                  <h4>{item.role}</h4>
-                  <p className="organization">{item.organization}</p>
-                  <ul>
-                    {item.bullets.map((b, bIdx) => (
-                      <li key={bIdx}>{b}</li>
-                    ))}
-                  </ul>
-                  <div className="pt-2 flex flex-wrap gap-1.5">
-                    {item.stack.map((t) => (
-                      <span
-                        key={t}
-                        className="px-2 py-0.5 font-mono text-[9px] bg-[#162111] border border-[#2b3a20] text-[#aeb89b] rounded-xs"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </div>
