@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PROJECTS, PERSONAL_INFO } from "@/data/projects";
-import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { ExternalLink, ArrowUpRight, Eye } from "lucide-react";
 import { GithubIcon } from "@/components/ui/SocialIcons";
 
 export default function ProjectsPage() {
@@ -112,17 +112,28 @@ export default function ProjectsPage() {
                     <ArrowUpRight className="w-3.5 h-3.5 text-secondary" />
                   </Link>
 
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 py-2 px-3 border border-border bg-card text-foreground font-mono text-xs font-bold uppercase tracking-wider hover:bg-muted transition-colors text-center"
-                      title="GitHub Repository"
+                  {project.slug === "bridge-it" ? (
+                    <Link
+                      href={`/projects/${project.slug}#dbt-paper`}
+                      className="inline-flex items-center justify-center gap-1.5 py-2 px-3 border border-secondary/40 bg-secondary/15 text-secondary font-mono text-xs font-bold uppercase tracking-wider hover:bg-secondary/25 transition-colors text-center"
+                      title="Read DBT Research Proposal Paper"
                     >
-                      <GithubIcon className="w-3.5 h-3.5" />
-                      REPO
-                    </a>
+                      <Eye className="w-3.5 h-3.5" />
+                      PAPER
+                    </Link>
+                  ) : (
+                    project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-1.5 py-2 px-3 border border-border bg-card text-foreground font-mono text-xs font-bold uppercase tracking-wider hover:bg-muted transition-colors text-center"
+                        title="GitHub Repository"
+                      >
+                        <GithubIcon className="w-3.5 h-3.5" />
+                        REPO
+                      </a>
+                    )
                   )}
 
                   {project.liveUrl && (

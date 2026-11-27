@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { PROJECTS } from "@/data/projects";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ArrowLeft, ExternalLink, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ExternalLink, CheckCircle2, Eye } from "lucide-react";
 import { GithubIcon } from "@/components/ui/SocialIcons";
 import { ProposalReader } from "@/components/projects/ProposalReader";
 
@@ -92,16 +92,26 @@ export default async function ProjectCaseStudyPage({
 
             {/* Direct Links */}
             <div className="mt-6 flex flex-wrap gap-3">
-              {project.githubUrl && (
+              {project.slug === "bridge-it" ? (
                 <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 border border-border bg-card text-foreground font-mono text-xs font-bold uppercase hover:bg-muted transition-colors"
+                  href="#dbt-paper"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-secondary/40 bg-secondary/15 text-secondary font-mono text-xs font-bold uppercase hover:bg-secondary/25 transition-colors cursor-pointer"
                 >
-                  <GithubIcon className="w-3.5 h-3.5" />
-                  PROJECT REPOSITORY
+                  <Eye className="w-3.5 h-3.5 text-secondary" />
+                  READ RESEARCH PAPER
                 </a>
+              ) : (
+                project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-border bg-card text-foreground font-mono text-xs font-bold uppercase hover:bg-muted transition-colors"
+                  >
+                    <GithubIcon className="w-3.5 h-3.5" />
+                    PROJECT REPOSITORY
+                  </a>
+                )
               )}
               {project.liveUrl && (
                 <a
@@ -194,9 +204,9 @@ export default async function ProjectCaseStudyPage({
 
             {/* Read-Only Research Proposal for Bridge IT */}
             {project.slug === "bridge-it" && (
-              <div>
+              <div id="dbt-paper">
                 <span className="mono-tag block mb-2">[ 06 // DBT RESEARCH PAPER ]</span>
-                <ProposalReader />
+                <ProposalReader id="dbt-paper-reader" />
               </div>
             )}
 

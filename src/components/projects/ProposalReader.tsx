@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import { FileText, Eye, ShieldCheck, ChevronDown, ChevronUp } from "lucide-react";
 
-export function ProposalReader() {
+export function ProposalReader({ id }: { id?: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-border bg-card mt-6 select-none overflow-hidden">
+    <div id={id} className="border border-border bg-card mt-6 select-none overflow-hidden">
       {/* Header bar */}
       <div
         onClick={() => setIsOpen(!isOpen)}
