@@ -19,7 +19,7 @@
 }
 
 :root {
-  /* Light Theme (Warm Paper / Swiss Editorial) */
+  /* Light Theme (Warm Paper / Swiss Editorial with Radioactive Green Accent) */
   --background: #fbfbfa;
   --foreground: #0d1117;
   --card: #ffffff;
@@ -28,19 +28,19 @@
   --popover-foreground: #0d1117;
   --primary: #0f172a;
   --primary-foreground: #ffffff;
-  --secondary: #0f766e; /* Deep Teal accent */
-  --secondary-foreground: #ffffff;
+  --secondary: #4ade80; /* Consistent Radioactive / Emerald Green */
+  --secondary-foreground: #090a0f;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #0f766e;
+  --ring: #4ade80;
   --grid-line: rgba(15, 23, 42, 0.05);
   color-scheme: light;
 }
 
 html.dark, html[data-theme="dark"], body.dark, [data-theme="dark"] {
-  /* Dark Theme (Obsidian / Technical Blueprint) */
+  /* Dark Theme (Obsidian / Technical Blueprint with Radioactive Green Accent) */
   --background: #090a0f !important;
   --foreground: #f8fafc !important;
   --card: #0f121a !important;
@@ -49,13 +49,13 @@ html.dark, html[data-theme="dark"], body.dark, [data-theme="dark"] {
   --popover-foreground: #f8fafc !important;
   --primary: #f8fafc !important;
   --primary-foreground: #090a0f !important;
-  --secondary: #3b82f6 !important; /* Electric Cobalt Blue accent */
-  --secondary-foreground: #ffffff !important;
+  --secondary: #4ade80 !important; /* Consistent Radioactive / Emerald Green */
+  --secondary-foreground: #090a0f !important;
   --muted: #161b26 !important;
   --muted-foreground: #94a3b8 !important;
   --border: #1e293b !important;
   --input: #1e293b !important;
-  --ring: #3b82f6 !important;
+  --ring: #4ade80 !important;
   --grid-line: rgba(255, 255, 255, 0.05) !important;
   color-scheme: dark;
 }
@@ -109,7 +109,7 @@ body {
 /* Subtle selection */
 ::selection {
   background-color: var(--secondary);
-  color: #ffffff;
+  color: #090a0f;
 }
 
 /* Technical Bracket Tags */
