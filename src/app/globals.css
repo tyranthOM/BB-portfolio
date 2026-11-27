@@ -19,7 +19,7 @@
 }
 
 :root {
-  /* Light Theme (Warm Paper / Swiss Editorial with Radioactive Green Accent) */
+  /* Light Theme (Warm Paper / Swiss Editorial with Deep Emerald / Forest Teal Accent) */
   --background: #fbfbfa;
   --foreground: #0d1117;
   --card: #ffffff;
@@ -28,19 +28,19 @@
   --popover-foreground: #0d1117;
   --primary: #0f172a;
   --primary-foreground: #ffffff;
-  --secondary: #4ade80; /* Consistent Radioactive / Emerald Green */
-  --secondary-foreground: #090a0f;
+  --secondary: #0d7a68; /* Exact Deep Emerald/Teal Green from screenshot */
+  --secondary-foreground: #ffffff;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #4ade80;
+  --ring: #0d7a68;
   --grid-line: rgba(15, 23, 42, 0.05);
   color-scheme: light;
 }
 
 html.dark, html[data-theme="dark"], body.dark, [data-theme="dark"] {
-  /* Dark Theme (Obsidian / Technical Blueprint with Radioactive Green Accent) */
+  /* Dark Theme (Obsidian / Technical Blueprint with matching Emerald / Teal Green Accent) */
   --background: #090a0f !important;
   --foreground: #f8fafc !important;
   --card: #0f121a !important;
@@ -49,13 +49,13 @@ html.dark, html[data-theme="dark"], body.dark, [data-theme="dark"] {
   --popover-foreground: #f8fafc !important;
   --primary: #f8fafc !important;
   --primary-foreground: #090a0f !important;
-  --secondary: #4ade80 !important; /* Consistent Radioactive / Emerald Green */
-  --secondary-foreground: #090a0f !important;
+  --secondary: #10b981 !important; /* Rich vibrant emerald in dark mode for optimal contrast */
+  --secondary-foreground: #ffffff !important;
   --muted: #161b26 !important;
   --muted-foreground: #94a3b8 !important;
   --border: #1e293b !important;
   --input: #1e293b !important;
-  --ring: #4ade80 !important;
+  --ring: #10b981 !important;
   --grid-line: rgba(255, 255, 255, 0.05) !important;
   color-scheme: dark;
 }
@@ -106,10 +106,10 @@ body {
   background: var(--muted-foreground);
 }
 
-/* Subtle selection */
+/* Selection */
 ::selection {
   background-color: var(--secondary);
-  color: #090a0f;
+  color: #ffffff;
 }
 
 /* Technical Bracket Tags */
