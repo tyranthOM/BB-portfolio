@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/projects/cafe-la-roche",
     "/projects/bridge-it",
-    "/projects/bulk-document-processor",
+    "/projects/iloveswap",
     "/projects/aegis-match",
     "/projects/krypton-kv",
     "/projects/commitor",

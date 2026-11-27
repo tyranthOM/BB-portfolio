@@ -99,25 +99,26 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    slug: "bulk-document-processor",
-    title: "Bulk Document Processor",
+    slug: "iloveswap",
+    title: "iLoveSwap",
     category: "Web",
-    tag: "Workflow Automation",
+    tag: "Document Intelligence & CLI",
     oneLiner:
-      "Web tool that batch-edits documents and packages them into an upload-ready zip.",
+      "Automated document bifurcator and identity engine parsing PDF and Word XML in-browser.",
     dates: "2025",
-    role: "Creator & Developer",
+    role: "Creator & Lead Developer",
     problem:
-      "Preparing and uploading multiple files by hand across academic or administrative portals is repetitive, slow, and error-prone.",
+      "Manual multi-page report formatting, academic metadata sanitation, and student tag replacements require tedious repetitive editing across separate PDF and DOCX files.",
     solution:
-      "Upload a set of files, apply required text and format transformations automatically across all items in batch, and download a structured zip package ready for submission.",
+      "Engineered an in-browser document processing engine with dual web and Chromium Extension targets. Features semantic section chunking, direct Word XML in-place modification, WinAnsi font sanitization, and batch ZIP export.",
     keyDecisions:
-      "Client-side processing with in-memory zip compression to preserve file security and eliminate server bandwidth bottlenecks.",
+      "100% client-side zero-server architecture via WebAssembly, PDF.js, and JSZip to eliminate file privacy concerns, latency, and cloud hosting costs.",
     result:
-      "Automates repetitive multi-file transformations from minutes of manual copying to a single batch upload and zip download.",
-    skillsShown: ["Web Development", "File Processing", "Automation", "Workflow Optimization"],
-    stack: ["React", "TypeScript", "JSZip", "Automation"],
+      "Eliminates manual re-typing and layout corruption across multi-document submissions with 1-click batch profile swapping.",
+    skillsShown: ["PDF.js & WebAssembly", "Word XML Parsing", "Chromium Extension V3", "Client-Side Processing"],
+    stack: ["React", "TypeScript", "PDF.js", "Chrome Extension V3", "JSZip"],
     liveUrl: "https://scamyyy.vercel.app/",
+    githubUrl: "https://github.com/tyranthOM/scamyyy",
     featured: true,
   },
   {
